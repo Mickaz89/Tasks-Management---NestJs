@@ -1,0 +1,50 @@
+### Get All Tasks
+GET http://localhost:3000/tasks
+
+### Get Tasks With Filters
+GET http://localhost:3000/tasks?search=FOO
+
+### Create new task
+POST http://localhost:3000/tasks 
+content-type: application/json
+
+{
+  "title" : "EAT EAT EAT",
+  "description": "Eat food"
+}
+
+### Get Task By Id
+GET http://localhost:3000/tasks/f74a0b3a-a75f-42dc-910d-c014c4b24cd3
+
+### Delete task 
+
+DELETE http://localhost:3000/tasks/d3959d76-15ef-4b17-b14e-b60380579fe1
+
+### Update task status
+
+PATCH http://localhost:3000/tasks/7e37be0e-b08c-4d70-a630-cc1008e73d72/status
+content-type: application/json
+
+{
+  "status" : "IN_PROGRESS"
+}
+
+
+### Sign Up
+POST http://localhost:3000/auth/signup
+content-type: application/json
+
+{
+  "username" : "Mickaelaaaaa",
+  "password": "superPassowrd1@"
+}
+
+
+### Sign In
+POST http://localhost:3000/auth/signIn
+content-type: application/json
+
+{
+  "username" : "Mickaelaaaaa",
+  "password": "superPassowrd1@"
+}
